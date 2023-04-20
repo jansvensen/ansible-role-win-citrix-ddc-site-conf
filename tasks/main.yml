@@ -12,7 +12,7 @@
 - name: Hydrate Site
   script: hydrate.ps1
   args:
-    creates: '{{ citrix_logfolder }}'\done-hydrate.txt
+    creates: '{{ citrix_logfolder }}\done-hydrate.txt'
   environment:
     citrix_siteconfig_vdahostname: "{{ citrix_siteconfig_vdahostname }}"
     citrix_siteconfig_machinecatalog: "{{ citrix_siteconfig_machinecatalog }}"
