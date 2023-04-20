@@ -11,7 +11,7 @@
 
 - name: Copy the Citrix config script
   win_copy:
-    src: CitrixPolicy.txt
+    src: config.ps1
     dest: '{{ citrix_installfolder }}'
 
 - name: Configure Site
