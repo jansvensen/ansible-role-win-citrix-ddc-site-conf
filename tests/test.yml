@@ -2,4 +2,4 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - citrix-site-hydrate
+    - ansible-role-win-citrix-ddc-site-conf
