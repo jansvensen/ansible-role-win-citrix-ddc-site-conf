@@ -1,9 +1,4 @@
 ---
-- name: Create local Folder
-  win_file:
-    path: '{{ citrix_logfolder }}'
-    state: directory
-
 - name: Copy the Citrix Policy input file
   win_copy:
     src: CitrixPolicy.txt
