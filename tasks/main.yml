@@ -12,7 +12,7 @@
 - name: Configure Site
   script: config.ps1
   args:
-    creates: '{{ directory_logging }}\done-config.txt'
+    creates: '{{ directory_logging }}done-config.txt'
   environment:
     citrix_siteconfig_vdahostname: "{{ citrix_siteconfig_vdahostname }}"
     citrix_siteconfig_machinecatalog: "{{ citrix_siteconfig_machinecatalog }}"
