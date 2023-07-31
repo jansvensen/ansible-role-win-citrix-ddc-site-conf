@@ -34,6 +34,6 @@ $notepadicon = New-BrokerIcon -EncodedIconData $notepad
 New-BrokerApplication -ApplicationType "HostedOnDesktop" -CommandLineArguments "" -CommandLineExecutable "C:\Windows\system32\notepad.exe" -CpuPriorityLevel "Normal" -DesktopGroup $dg.uid -Enabled $True -IconUid $notepadicon.uid -IgnoreUserHomeZone $False -MaxPerUserInstances 0 -MaxTotalInstances 0 -Name "Notepad" -Priority 0 -PublishedName "Notepad" -SecureCmdLineArgumentsEnabled $True -ShortcutAddedToDesktop $False -ShortcutAddedToStartMenu $False -UserFilterEnabled $False -Visible $True -WaitForPrinterCreation $False
 
 # Create Citrix Policies
-Import-BrokerDesktopPolicy (Get-Content C:\Install\CitrixPolicy.txt)
+Import-BrokerDesktopPolicy (Get-Content {{ directory_install }}\CitrixPolicy.txt)
 
-"complete"  >> c:\logs\done-hydrate.txt
+"complete"  >> {{ directory_logging }}done-hydrate.txt
