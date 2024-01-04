@@ -2,12 +2,7 @@
 - name: Copy the Citrix Policy input file
   win_copy:
     src: CitrixPolicy.txt
-    dest: '{{ citrix_installfolder }}'
-
-- name: Copy the Citrix config script
-  win_copy:
-    src: config.ps1
-    dest: '{{ citrix_installfolder }}'
+    dest: '{{ directory_install }}\Citrix'
 
 - name: Configure Site
   script: config.ps1
