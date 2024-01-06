@@ -2,12 +2,12 @@
 - name: Copy the Citrix Policy input file
   win_copy:
     src: CitrixPolicy.txt
-    dest: '{{ win.directory.install }}'
+    dest: '{{ directory_install }}'
 
 - name: Configure Site
   script: config.ps1
   args:
-    creates: '{{ win.directory.logging }}done-config.txt'
+    creates: '{{ directory_logging }}done-config.txt'
   environment:
     citrix_siteconfig_vdahostname: "{{ citrix.site.siteconfig.vdahostname }}"
     citrix_siteconfig_machinecatalog: "{{ citrix.site.siteconfig.machinecatalog }}"
